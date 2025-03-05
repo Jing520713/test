@@ -1,1 +1,5 @@
 加油
+git init 建立repository
+git add git加入索引
+git commit -m "" 提交 訊息用來溝通修改內容
+git push -u <名稱><網址>上傳到雲端repository -u設定預設值
