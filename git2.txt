@@ -15,6 +15,7 @@ git branch 查看分支
 git branch -d <名稱> 刪除分支
 git switch 切換分支
 git pull 從雲端更新
+git lfs pull 下載LFS文件
 git push -f
 git merge 合併兩個分支，保留完整的提交歷史
 git rebase 把當前分支的提交重新應用到目標分支上，使歷史保持線性
