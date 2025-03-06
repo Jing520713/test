@@ -2,7 +2,7 @@
 git init 建立repository
 git status / git log 查看當前狀態/紀錄
 git mv <名稱><名稱> 更改目錄名稱
-git add 加入索引
+git add 加入索引 git add -u 可以僅將「更新」或「刪除」的檔案變更寫入
 git commit -m "" 提交 訊息用來溝通修改內容 概念類似於存檔
 git push -u <名稱><網址>上傳到雲端repository -u設定預設值
 git reset 取消提交
