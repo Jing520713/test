@@ -6,10 +6,11 @@ git add 加入索引 git add -u 可以僅將「更新」或「刪除」的檔案
 git commit -m "" 提交 訊息用來溝通修改內容 概念類似於存檔
 git push -u <名稱><網址>上傳到雲端repository -u設定預設值
 git reset 取消提交
+git reset --hard ORIG_HEAD 回到上一版
 git checkout 恢復文件及切換分支
 
 branch分支開發及merge合併
-git checkout -b <名稱> 建立新branch
+git checkout -b <名稱> 建立新branch並切過去
 git branch 查看分支
 git branch -d <名稱> 刪除分支
 git switch 切換分支
@@ -23,3 +24,5 @@ git rebase     | git merge
 git歷史分支       線性歷史
 
 git stash -u <暫存檔訊息> 暫存檔
+git stash pop 取回暫存檔
+git diff 自動比對檔案衝突
