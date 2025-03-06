@@ -19,7 +19,7 @@ git push -f
 git merge 合併兩個分支，保留完整的提交歷史
 git rebase 把當前分支的提交重新應用到目標分支上，使歷史保持線性
 git rebase -i 修改文件檔可以達到題整commit的多樣功能
-git rebase     | git merge
+git merge     | git rebase
 保留原始commit    重新排列提交
 適合多人          若分支已推到雲端避免使用
 git歷史分支       線性歷史
