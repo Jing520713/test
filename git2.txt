@@ -21,3 +21,5 @@ git rebase     | git merge
 保留原始commit    重新排列提交
 適合多人          若分支已推到雲端避免使用
 git歷史分支       線性歷史
+
+git stash -u <暫存檔訊息> 暫存檔
