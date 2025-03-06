@@ -26,3 +26,7 @@ git歷史分支       線性歷史
 git stash -u <暫存檔訊息> 暫存檔
 git stash pop 取回暫存檔
 git diff 自動比對檔案衝突
+git reset --hard "HEAD^"   刪除最近一次版本
+git reset --soft "HEAD^"   刪除最近一次的版本紀錄,但保留變更
+git reset --hard ORIG_HEAD 還原最近一次的操作（merge,rebase,reset）
+git commit --amend 重新提交HEAD版本（補充或是修改訊息）
