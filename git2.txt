@@ -1,6 +1,7 @@
 加油
 git clone 完整複製專案
 fork (github) 複製一份專案到帳號
+git remote add <網址> 加入遠端repository
 git init 建立repository
 git status / git log 查看當前狀態/紀錄
 git mv <名稱><名稱> 更改目錄名稱
@@ -10,7 +11,7 @@ git push -u <名稱><網址>上傳到雲端repository -u設定預設值
 git reset 取消提交
 git reset --hard ORIG_HEAD 回到上一版
 git checkout 恢復文件及切換分支
-git remote add <網址> 加入遠端repository
+
 
 branch分支開發及merge合併
 git checkout -b <名稱> 建立新branch並切過去
