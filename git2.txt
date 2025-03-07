@@ -1,4 +1,6 @@
 加油
+git clone 完整複製專案
+fork (github) 複製一份專案到帳號
 git init 建立repository
 git status / git log 查看當前狀態/紀錄
 git mv <名稱><名稱> 更改目錄名稱
