@@ -4,6 +4,12 @@ ros2 topic pub /chatter std_msgs/msg/String "{data: 'Hello, ROS2!'}" 用命令�
 self.publisher_ = self.create_publisher(String, 'topic', 10) 在node創一個pub
 ros2 topic echo /chatter 用命令創一個sub
 self.subscription = self.create_subscription(String,'topic',self.listener_callback,10) 在node創一個sub
+source 設置環境變量
+
+topic 發布-訂閱模型,連續數據 透過topic_name訊息交換
+Service（服务）	请求-響應模型，客戶端請求,服務端回應,適合短時間單次請求 做特定動作
+Parameter  用於動態配置何存儲配置數據的機制,使用者可在runtime中設定node參數,在運行時通過set parameter來改變其行為, node可以通過get parameter來讀取當前參數值 可透過rqt_reconfiguregk設定參數
+Action	異步請求-響應模型，適用於長時間運行,可取消的任務
 
 QoS 控制ROS2 topic的通信方式
 History（歷史訊息）:
@@ -16,15 +22,11 @@ Durability：
     Transient local：Publisher會試著保存樣本給晚加入的Subscriber
     Volatile：不保存樣本
 
-topic 發布-訂閱模型,連續數據 透過topic_name訊息交換
-Service（服务）	请求-響應模型，客戶端請求,服務端回應,適合短時間單次請求 做特定動作
-Parameter  用於動態配置何存儲配置數據的機制,使用者可在runtime中設定node參數,在運行時通過set parameter來改變其行為, node可以通過get parameter來讀取當前參數值 可透過rqt_reconfiguregk設定參數
-Action	異步請求-響應模型，適用於長時間運行,可取消的任務
-DDS	ROS2 ros2底層通訊協議 
-rqt 可視化工具 rqt_graph
+DDS	ROS2 ros2底層通訊協議 ,分佈式系統可達到pub sub通訊功能,目的解決ros1延遲問題
 
 Message 一些型態的定義,可獨立成一個pkg,供其他pkg使用就不用每次都重新定義
 常用 msg : std_msgs基礎資料型態 geometry_msgs幾何資料型態 sensor_msgs感測器資料型態 nav_msgs導航資料型態 visualization_msgs rviz用來畫圖的plugin
-rosbag 整合並錄製好資料,可共後續重播 快進跳轉等
+rosbag 整合並錄製好資料,可共後續重播 快進跳轉等 -l 循環播放 -r 回放速度
 ros2 bag info <bag_name> 顯示bag資訊包含topic,type,message等
 ros2 bag play <bag_name>: 播放bag，可以指定速度、只發布特定的topic、自動重播、remap等等。
+rqt 可視化工具 rqt_graph
