@@ -1,2 +1,17 @@
-ros2 node list
-ros2 node info /node_name
+ros2 node/topic list 目前的topic及node
+ros2 node/topic info /node_name
+ros2 topic pub /chatter std_msgs/msg/String "{data: 'Hello, ROS2!'}" 創一個pub
+ros2 topic echo /chatter 創一個sub
+rqt 可視化工具 rqt_graph
+
+QoS 控制ROS2 topic的通信方式
+History（歷史訊息）:
+    Keep Last（保留最新的N筆訊息）Queue size 設定queue的大小
+    Keep All（保留所有的訊息）
+Reliability（可靠性）:
+    Reliable（保證訊息一定會傳遞成功，若失敗會進行重傳）導航
+    Best Effort（試著傳遞訊息，但是不保證訊息一定會傳遞成功）sensor
+Durability：
+    Transient local：Publisher會試著保存樣本給晚加入的Subscriber
+    Volatile：不保存樣本
+
