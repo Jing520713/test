@@ -1,8 +1,9 @@
 ros2 node/topic list 目前的topic及node
 ros2 node/topic info /node_name
-ros2 topic pub /chatter std_msgs/msg/String "{data: 'Hello, ROS2!'}" 創一個pub
-ros2 topic echo /chatter 創一個sub
-rqt 可視化工具 rqt_graph
+ros2 topic pub /chatter std_msgs/msg/String "{data: 'Hello, ROS2!'}" 用命令創一個pub
+self.publisher_ = self.create_publisher(String, 'topic', 10) 在node創一個pub
+ros2 topic echo /chatter 用命令創一個sub
+self.subscription = self.create_subscription(String,'topic',self.listener_callback,10) 在node創一個sub
 
 QoS 控制ROS2 topic的通信方式
 History（歷史訊息）:
@@ -15,3 +16,10 @@ Durability：
     Transient local：Publisher會試著保存樣本給晚加入的Subscriber
     Volatile：不保存樣本
 
+
+Service（服务）	请求-响应机制，适用于一次性任务
+Action	异步任务，适用于长时间运行的任务
+QoS	控制通信的可靠性与实时性
+DDS	ROS2 底层通信协议
+rqt 可視化工具 rqt_graph
+Parameter	存储节点配置数据
